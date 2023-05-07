@@ -10,6 +10,8 @@ function App() {
     id: '',
     img: '',
     types: [],
+    stats: [],
+    abilities: [],
   })
   const colorsTypes = {
     'bug': 'DarkGreen',
@@ -43,7 +45,9 @@ function App() {
           name: response.data.name,
           id: response.data.id,
           img: response.data.sprites.front_default,
-          types: response.data.types
+          types: response.data.types,
+          stats: response.data.stats,
+          abilities: response.data.abilities,
         }
       )
     })
@@ -97,7 +101,7 @@ function App() {
 
         <div className='container-pesquisa'>
           <input defaultValue={pokemon} placeholder={pokemon} onChange={(e) => setPokemon(e.target.value)}/>
-          <p>{dados.id}</p>
+          <p>#{dados.id}</p>
         </div>
 
         <img src={dados.img}/>
@@ -110,6 +114,29 @@ function App() {
                 )
               })}
           </div>
+
+        <div className='container-Info'>
+              <div className='container-Stats'>
+                <p className='titulo'>Status</p>
+                {dados.stats.map((item, index) => {
+                  return(
+                    <div className='stats' key={index}>
+                      <p>{item.stat.name}:</p>
+                      <p>{item.base_stat}</p>
+                    </div>
+                  )
+                })}
+              </div>
+
+              <div className='container-Abilities'>
+                <p className='titulo'>Habilidades</p>
+                {dados.abilities.map((item, index) => {
+                  return(
+                    <p key={index}>{index + 1}. {item.ability.name}</p>
+                  )
+                })}
+              </div>
+        </div>
 
       </div>
     </div>

@@ -4,8 +4,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
+    text-shadow: 0 0 4px black;
     .container-Pokedex{ 
-        width: 300px;
+        width: 320px;
         height: 500px;
         border-radius: 50px;
         box-shadow:  20px 20px 60px rgba(0, 0, 0, 0.7),
@@ -17,12 +19,17 @@
         .container-pesquisa{
             width: 100%;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
+            padding: 0 30px;
             input{
+                width: 120px;
                 font-size: 1.2rem;
+                padding: 5px;
+                color: white;
                 border: none;
-                border-bottom: 1px solid black;
-                background-color: transparent;
+                border-bottom: 1px solid white;
+                outline: 0;
+                background: transparent;
             }
             p{
                 color: white;
@@ -30,9 +37,11 @@
             }
         }
         img{
-            width: 70%;
+            margin-top: -20px;
+            height: 200px;
         }
         .name{
+            margin-top: -40px;
             color: white;
             font-size: 2rem;
         }
@@ -48,6 +57,41 @@
                 padding: 5px 10px;
                 border-radius: 15px;
                 box-shadow:  0 4px 6px rgba(0, 0, 0, 0.5)
+            }
+        }
+        .container-Info{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 20px;
+            .container-Stats{
+                .titulo{
+                    margin: 0;
+                    text-align: center;
+                    font-size: 1.2rem;
+                }
+                .stats{
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 10px;
+                }
+                p{
+                    font-size: 0.9rem;
+                    margin-top: 5px;
+                }
+            }
+
+            .container-Abilities{
+                .titulo{
+                    margin: 0;
+                    text-align: center;
+                    font-size: 1.2rem;
+                }
+                p{
+                    margin-top: 5px;
+                    font-size: 0.9rem;
+                }
             }
         }
     }   
