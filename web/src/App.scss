@@ -6,12 +6,13 @@
     justify-content: center;
     color: white;
     text-shadow: 0 0 4px black;
+    transition: all 1s;
     .container-Pokedex{ 
         width: 320px;
         height: 550px;
         border-radius: 50px;
         box-shadow:  20px 20px 60px rgba(0, 0, 0, 0.7),
-                    -20px -20px 60px rgba(128, 128, 128, 0.5);
+                    -20px -20px 60px rgba(255, 255, 255, 0.25);
         display: flex;
         flex-direction: column;
         justify-content: center;
