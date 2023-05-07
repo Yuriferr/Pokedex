@@ -24,6 +24,7 @@ Este √© um projeto de Pokedex que utiliza o Vite e a PokeAPI para obter informa√
 - PokeAPI
 - HTML
 - CSS
+- SCSS
 - JavaScript
 
 ## Design
